@@ -1,0 +1,21 @@
+@import "../../../assets/scss/variables";
+
+:host {
+  display: block;
+  position: fixed;
+  background-color: var(--primary-color);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  border-top-right-radius: $main-round;
+  border-bottom-right-radius: $main-round;
+  text-align: center;
+
+  a {
+    color: var(--surface-300);
+    transition: $transition;
+    &:hover {
+      color: var(--surface-100);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+:host {
+  display: block;
+
+  .custom-padding {
+    @media (max-width: 768px) {
+      padding-left: 4.25rem;
+      padding-right: 1rem;
+    }
+
+    padding-right: 2.5rem;
+    padding-left: 7rem;
+  }
+}

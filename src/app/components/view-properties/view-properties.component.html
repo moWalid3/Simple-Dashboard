@@ -1,0 +1,16 @@
+<p-button (onClick)="op.toggle($event)" icon="pi pi-ellipsis-h" [text]="true" />
+
+<p-overlayPanel #op class="shadow-8" styleClass="w-22rem">
+  <h6 class="p-2 m-0 border-bottom-1 border-200 text-13px font-semibold">View Properties:</h6>
+
+  <form class="pt-3 grid">
+    @for (subProperties of [1, 2]; track $index) {
+      @let currentSubProperties = $first ? properties.slice(0, 3) : properties.slice(3, 6);
+      <div class="col-6 flex flex-column gap-2">
+        @for (property of currentSubProperties; track $index) {
+          <p-checkbox (onChange)="onHandlePropertyChange()" [(ngModel)]="chosenProperties" [label]="property.name" name="member" [value]="property.key" class="text-xs font-medium" />
+        }
+      </div>
+    }
+  </form>
+</p-overlayPanel>

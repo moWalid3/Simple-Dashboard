@@ -1,0 +1,22 @@
+<ul class="surface-section mb-4">
+  <li>
+    <a (click)="currentView.set('Graph')"  class="btn-group" [class.active-period]="currentView() === 'Graph'">
+      <i class="pi pi-chart-bar mr-1"></i> Graph
+    </a>
+  </li>
+  <li>
+    <a (click)="currentView.set('List')"  class="btn-group" [class.active-period]="currentView() === 'List'">
+      <i class="pi pi-list mr-1"></i> List
+    </a>
+  </li>
+</ul>
+
+@if (currentView() === 'Graph') {
+  <app-stations-graph [stations]="stationsService.allStations" />
+}@else {
+  <div class="stations-list">
+    @for (station of stationsService.allStations; track station.id) {
+      <app-stations-list [station]="station" class="surface-section border-round-2xl p-4 mb-3" />
+    }
+  </div>
+}

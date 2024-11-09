@@ -1,0 +1,36 @@
+:host {
+  display: block;
+
+  ul {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    border-radius: 50rem;
+  }
+
+  .stations-list {
+    display: block;
+    height: 21rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
+
+  .stations-list::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2px;
+  }
+
+  .stations-list::-webkit-scrollbar-track {
+    background: var(--highlight-bg);
+    border-radius: 2px;
+  }
+
+  .stations-list::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+  }
+
+  .stations-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
+}

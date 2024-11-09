@@ -1,0 +1,47 @@
+body {
+  background-color: var(--surface-ground);
+  margin: 0;
+}
+
+.text-13px {
+  font-size: 13px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlight-bg {
+  background-color: var(--highlight-bg) !important;
+}
+
+a.btn-group {
+  display: block;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50rem;
+  font-size: 14px;
+  color: var(--gray-400);
+  cursor: pointer;
+  font-weight: 600;
+
+  &.active-period {
+    background-color: var(--primary-color);
+    color: var(--gray-50);
+  }
+}
+
+.small-circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}

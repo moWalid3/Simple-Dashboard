@@ -1,0 +1,9 @@
+@for (state of overviewStatesService.states; track state.id) {
+  <div class="col">
+    <div class="surface-section border-round-2xl p-4" [class.highlight-bg]="$first">
+      <p class="mt-0 mb-2 text-2xl font-bold text-900">{{ state.stateValue }} <span class="text-xl font-normal">{{ state.stateUnit }}</span></p>
+      <p class="mt-0 mb-3 font-semibold text-sm text-700">{{ state.state }}</p>
+      <small [class]="state.statusColor + ' flex align-items-center gap-2'"><i [class]="state.statusIcon + ' text-lg'"></i>{{ state.statusValue }}</small>
+    </div>
+  </div>
+}

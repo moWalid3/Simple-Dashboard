@@ -1,0 +1,37 @@
+<div class="flex gap-2 flex-wrap justify-content-between border-bottom-1 border-200 pb-2 mb-3">
+  <div class="flex gap-2 align-items-center">
+    <span class="small-circle mr-1"></span>
+    <i class="pi pi-server text-3xl text-primary mr-1"></i>
+    <h6 class="m-0 text-base text-700">{{ station().name }}</h6>
+  </div>
+
+  <app-view-properties (onChangeViewProperties)="finalChosenProperties.set($event)" />
+</div>
+
+<div class="grid gap-2 lg:gap-5 justify-content-between">
+  <div class="col-12 md:col-5 lg:col">
+    @if (finalChosenProperties().includes('TotalSales')) {
+      <p class="flex justify-content-between gap-1 m-0 text-xs mb-3 font-bold text-900">Total Sales <span class="text-600 text-13px font-normal">{{ station().totalSales }}</span></p>
+    }
+    @if (finalChosenProperties().includes('TotalValue')) {
+      <p class="flex justify-content-between gap-1 m-0 text-xs font-bold text-900">Total Value <span class="text-600 text-13px font-normal">{{ station().totalValue }} EGP</span></p>
+    }
+  </div>
+  <div class="col-12 md:col-5 lg:col">
+    @if (finalChosenProperties().includes('CompressionState')) {
+      <p class="flex justify-content-between gap-1 m-0 text-xs mb-3 font-bold text-900">Compression State <span class="text-600 text-13px font-normal">{{ station().compressionState }}</span></p>
+    }
+    @if (finalChosenProperties().includes('TotalTransaction')) {
+      <p class="flex justify-content-between gap-1 m-0 text-xs font-bold text-900">Total Transaction Count <span class="text-600 text-13px font-normal">{{ station().totalTransactionCount }}</span></p>
+    }
+  </div>
+  <div class="col-12 lg:col">
+    @if (finalChosenProperties().includes('MaxTransactionPerHour')) {
+      <p class="flex justify-content-between gap-1 m-0 text-xs mb-3 font-bold text-900">Max Transaction / hour <span class="text-600 text-13px font-normal">{{ station().maxTransactionPerHour }}</span></p>
+    }
+    @if (finalChosenProperties().includes('MaxTransactionDateTime')) {
+      <p class="flex justify-content-between gap-1 m-0 text-xs font-bold text-900">Max Transaction Date-Time <span class="text-600 text-13px font-normal">{{ station().maxTransactionDateTime | date: 'short' }}</span></p>
+    }
+  </div>
+</div>
+

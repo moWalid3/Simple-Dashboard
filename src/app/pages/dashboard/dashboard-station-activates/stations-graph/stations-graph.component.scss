@@ -1,0 +1,30 @@
+@import "../../../../../assets/scss/variables";
+
+:host {
+  display: block;
+
+  h6 {
+    text-transform: uppercase;
+  }
+
+  ul {
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      padding-bottom: 0.5rem;
+      cursor: pointer;
+      transition: $transition;
+      color: var(--gray-600);
+
+      &.active {
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+      }
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+
+  }
+}

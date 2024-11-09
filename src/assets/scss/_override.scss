@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #ff7f5c;
+  --highlight-bg: #f4dbd4;
+  --surface-ground: #f9f5f3;
+}
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+  .p-progressbar .p-progressbar-value {
+    background-color: var(--primary-color);
+  }
+
+  .p-progressbar {
+    height: 5px;
+  }
+
+  p-chart canvas {
+    height: 250px !important;
+  }
+
+  .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+  }
+}

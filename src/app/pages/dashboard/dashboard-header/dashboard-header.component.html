@@ -1,0 +1,28 @@
+<div class="flex flex-wrap gap-4 justify-content-center">
+  <div class="flex gap-2 align-items-center">
+    <span class="small-circle"></span>
+    <i class="pi pi-server text-2xl text-700 mr-1"></i>
+    <p class="m-0 font-semibold text-3xl text-900">2/3</p>
+    <span class="text-xs">Monitored <br> Stations</span>
+  </div>
+
+  <div class="flex gap-2 align-items-center">
+    <span class="small-circle"></span>
+    <i class="pi pi-sync text-2xl text-700 mr-1"></i>
+    <p class="m-0 font-semibold text-3xl text-900">20s</p>
+    <span class="text-xs">Last <br> Update</span>
+  </div>
+</div>
+
+<div class="lg:flex-grow-1">
+  <ul class="surface-ground target-period w-fit">
+    <li><a (click)="targetPeriod.set('Today')" class="btn-group" [class.active-period]="targetPeriod() === 'Today'">Today</a></li>
+    <li><a (click)="targetPeriod.set('Yesterday')" class="btn-group" [class.active-period]="targetPeriod() === 'Yesterday'">Yesterday</a></li>
+    <li><a (click)="targetPeriod.set('Last week')" class="btn-group" [class.active-period]="targetPeriod() === 'Last week'">Last week</a></li>
+  </ul>
+</div>
+
+<div class="flex justify-content-center flex-wrap gap-2">
+  <p-calendar [iconDisplay]="'input'" styleClass="w-full w-15rem max-w-full" [showIcon]="true" placeholder="Start Date - time" [showTime]="true" />
+  <p-calendar [iconDisplay]="'input'" styleClass="w-full w-15rem max-w-full" [showIcon]="true" placeholder="End Date - time" [showTime]="true" />
+</div>
